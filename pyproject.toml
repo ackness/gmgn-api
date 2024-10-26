@@ -1,0 +1,28 @@
+[project]
+name = "gmgn-api"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "ackness", email = "ackness8@gmail.com" }
+]
+dependencies = [
+    "aiohttp>=3.10.10",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pre-commit>=4.0.1",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gmgn_api"]
